@@ -31,7 +31,7 @@ const Status = () => {
 
     useEffect(() => {
         if (!strawberry.x && status === 'Pause') {
-            strawberyTimer.current = setTimeout(() => dispatch(setStrawberry()), 1000);
+            strawberyTimer.current = setTimeout(() => dispatch(setStrawberry()), 14000);
         }
     }, [strawberry, dispatch, status])
 
