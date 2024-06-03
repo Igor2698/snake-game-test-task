@@ -1,0 +1,235 @@
+.App {
+  text-align: center;
+  background-color: #1b1b1b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.start-button {
+  background-color: #1b1b1b;
+  border-color: white;
+  color: white;
+  font-size: 5vh;
+  padding: 2vh 5vh;
+  border-radius: 1vh;
+  margin-top: 5vh;
+}
+
+.Square .snake {
+  background-color: #3eff37;
+  border-color: #3eff37;
+}
+
+.Square button {
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.Square .snake-head {
+  padding: 0;
+  border: 0;
+  background-color: #3f4b3e;
+  .icon {
+    max-width: 95%;
+    max-height: 95%;
+    border: none;
+    fill: currentColor;
+  }
+}
+
+.snake-head.direction-right {
+  transform: rotate(-90deg);
+}
+
+.snake-head.direction-left {
+  transform: rotate(90deg);
+}
+
+.snake-head.direction-up {
+  transform: rotate(180deg);
+}
+
+.Square .apple {
+  background-color: rgb(197, 138, 138);
+}
+
+.Square .banana {
+  background-color: #c2d916;
+  border-color: #c2d916;
+}
+
+.Square .strawberry {
+  background-color: rgb(146, 185, 187);
+}
+
+.Square button {
+  width: 6vh;
+  height: 6vh;
+  background-color: #1b1b1b;
+  border-color: rgb(58, 58, 58);
+  border-radius: 1vh;
+  margin: 0.5vh;
+}
+
+.game-over-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 10vh;
+  color: #ff3939;
+  transform: translate(-50%, -100%);
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(1, 1, 1, 0.8);
+
+  padding-top: 60px;
+}
+
+.modal-wrapper {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+.modal-wrapper form {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+
+  label {
+    font-size: 5vh;
+    color: #1b1b1b;
+    margin-bottom: 10px;
+  }
+
+  input {
+    font-size: 24px;
+    min-height: 25px;
+    min-width: 100%;
+    margin: 10px auto;
+    border-radius: 5px;
+    background-color: #d1dc82;
+  }
+
+  button {
+    background-color: #3eff37;
+    padding: 20px 40px;
+    margin: 15px auto;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    transition: all 500ms ease-in-out;
+    font-size: 24px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #2857ce;
+  }
+
+  button:disabled {
+    color: black;
+    cursor: not-allowed;
+    background-color: #5ade0e;
+    opacity: 0.5;
+  }
+}
+
+.gamer-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Стили для элементов списка */
+.gamer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.gamer-item:hover {
+  background-color: #f1f1f1;
+}
+
+.gamer-name {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.gamer-score {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.gamer-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.gamer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+.gamer-item:hover {
+  background-color: #f1f1f1;
+}
+
+.gamer-name {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.gamer-score {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.App h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
